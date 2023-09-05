@@ -45,10 +45,6 @@ The Apache Beam pipeline processes real-time data in the following steps:
 
 This Python script (`transactions_injector.py`) generates simulated transaction data and publishes it to a Google Pub/Sub topic. It is intended to be used alongside the Apache Beam pipeline to simulate a real-time transaction stream.
 
-## Google DataFlow
-
-The Apache Beam pipeline is orchestrated using Google DataFlow, ensuring a scalable and manageable real-time data processing pipeline.
-
 ### Overview
 
 - `tr_time_str`: Transaction timestamp
@@ -71,6 +67,10 @@ python transactions_injector.py
 - The script runs indefinitely and generates one transaction every 1 to 5 seconds.
 - Ensure you have appropriate permissions to publish to the Pub/Sub topic.
 - Note that this is a simulation and should not be used for production data.
+
+## Google DataFlow
+
+The Apache Beam pipeline is orchestrated using Google DataFlow, ensuring a scalable and manageable real-time data processing pipeline.
 
 ## Usage
 
