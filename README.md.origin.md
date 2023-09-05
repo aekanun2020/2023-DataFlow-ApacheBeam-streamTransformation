@@ -8,7 +8,6 @@ data from a Google Pub/Sub topic and writes it to a Google BigQuery table.
 - [Installation](#installation)
 - [Pipeline Overview](#pipeline-overview)
 - [Usage](#usage)
-- [Video for Usage](https://video.aekanun.com/kQffsCPg)
 - [Contributing](#contributing)
 - [License](#license)
 
