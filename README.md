@@ -34,19 +34,17 @@ Follow these steps to set up the project:
 The Apache Beam pipeline processes real-time data in the following steps:
 
 1. **Read from Pub/Sub:** The pipeline reads from a predefined Pub/Sub topic that streams transaction data in real-time.
-2. **Cleanse Data:** The pipeline cleanses the data using a custom function called `cleanse_data`. This function does the following:
-    - Strips white spaces from certain fields.
+2. **Cleanse Data:** The pipeline cleanses the data using a custom function called `cleanse_data`.
+    - Strips white spaces from certain fields
     - Tries to convert the `amount` field to a float. If conversion fails, it logs an error and sets `amount` to None.
     - Tries to convert the `tr_time_str` field to a datetime object, extracts the day of the week, and sets the `dayofweek` field accordingly. If conversion fails, it logs an error and sets `dayofweek` to None.
 3. **Write to BigQuery:** The cleansed data is written to a predefined BigQuery table.
 
-## Transaction Injector (`transactions_injector.py`)
+## Transaction Injector
 
-This Python script generates simulated transaction data and publishes it to a Google Pub/Sub topic. It is intended for use alongside the Apache Beam pipeline to simulate a real-time transaction stream.
+This Python script (`transactions_injector.py`) generates simulated transaction data and publishes it to a Google Pub/Sub topic. It is intended to be used alongside the Apache Beam pipeline to simulate a real-time transaction stream.
 
 ### Overview
-
-The script produces transactions that include the following fields:
 
 - `tr_time_str`: Transaction timestamp
 - `first_name`: First name of the person initiating the transaction
@@ -58,36 +56,32 @@ The script produces transactions that include the following fields:
 
 ### Usage
 
-Run the script to start generating transactions and sending them to the Pub/Sub topic:
+To start generating transactions and sending them to the Pub/Sub topic:
 
 ```bash
 python transactions_injector.py
-
-### Usage
-
-By default, the script will use the project ID 'bigdatainpractice1' and publish to the topic `aekanun-transactions`. To use a different project or topic, modify the `project` and `topic` variables in the script accordingly.
-
-#### Limitations and Considerations
+```
+## Limitations and Considerations
 
 - The script runs indefinitely and generates one transaction every 1 to 5 seconds.
 - Ensure you have appropriate permissions to publish to the Pub/Sub topic.
 - Note that this is a simulation and should not be used for production data.
 
-#### Usage
+## Usage
 
 To run the Apache Beam pipeline, execute the Python script:
 
 ```bash
 python newCol-logEnable-revised-WORK.py
-
-### Video for Usage
+```
+## Video for Usage
 
 For a video tutorial on how to use these scripts, you can [watch it here](https://video.aekanun.com/kQffsCPg).
 
-### Contributing
+## Contributing
 
 Feel free to contribute to this project. Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute.
 
-### License
+## License
 
 This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for more details.
