@@ -61,7 +61,7 @@ To start generating transactions and sending them to the Pub/Sub topic:
 ```bash
 python transactions_injector.py
 ```
-## Limitations and Considerations
+### Limitations and Considerations
 
 - The script runs indefinitely and generates one transaction every 1 to 5 seconds.
 - Ensure you have appropriate permissions to publish to the Pub/Sub topic.
@@ -74,6 +74,7 @@ To run the Apache Beam pipeline, execute the Python script:
 ```bash
 python newCol-logEnable-revised-WORK.py
 ```
+
 ## Video for Usage
 
 For a video tutorial on how to use these scripts, you can [watch it here](https://video.aekanun.com/kQffsCPg).
