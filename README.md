@@ -1,6 +1,6 @@
-# Apache Beam Pipeline and Transaction Injector for Real-Time Data Processing
+# Real-Time Data Processing with Apache Beam and Google DataFlow
 
-This repository contains two Python scripts:
+This repository is designed to implement a real-time data processing pipeline. The pipeline processes real-time transaction data from a Google Pub/Sub topic and writes it to a Google BigQuery table. The repository contains two main Python scripts:
 
 1. `newCol-logEnable-revised-WORK.py` - Implements an Apache Beam pipeline that processes real-time transaction data from a Google Pub/Sub topic and writes it to a Google BigQuery table.
 2. `transactions_injector.py` - Generates simulated transaction data and publishes it to a Google Pub/Sub topic, simulating a real-time transaction stream.
@@ -10,6 +10,7 @@ This repository contains two Python scripts:
 - [Installation](#installation)
 - [Pipeline Overview](#pipeline-overview)
 - [Transaction Injector](#transaction-injector)
+- [Google DataFlow](#google-dataflow)
 - [Usage](#usage)
 - [Video for Usage](https://video.aekanun.com/kQffsCPg)
 - [Contributing](#contributing)
@@ -43,6 +44,10 @@ The Apache Beam pipeline processes real-time data in the following steps:
 ## Transaction Injector
 
 This Python script (`transactions_injector.py`) generates simulated transaction data and publishes it to a Google Pub/Sub topic. It is intended to be used alongside the Apache Beam pipeline to simulate a real-time transaction stream.
+
+## Google DataFlow
+
+The Apache Beam pipeline is orchestrated using Google DataFlow, ensuring a scalable and manageable real-time data processing pipeline.
 
 ### Overview
 
